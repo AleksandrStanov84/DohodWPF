@@ -1,0 +1,95 @@
+﻿<Window x:Name="Графа_вывода_данных" x:Class="DochodRaschod.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DochodRaschod"
+        mc:Ignorable="d"
+        Title="Доходы и Засходы" Height="400" Width="800">
+    <Grid Background="#FF5EACE4">
+        <Button Content="Добавить" Margin="659,3,0,0" Width="106" Height="28" FontSize="16" FontFamily="Segoe Script" Click="Button_Click_NewWin" BorderBrush="#FFC73737" VerticalAlignment="Top" HorizontalAlignment="Left" Cursor="" FontStretch="UltraExpanded">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" Opacity="0.92">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.033"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Расход" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="87" Height="28" FontSize="16" FontFamily="Segoe Print" Click="Button_Click_Raschod">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Menu x:Name="menuItemCategory" VerticalAlignment="Top" Margin="0,0,749,0"/>
+        <DataGrid x:Name="TB" HorizontalAlignment="Left" Height="219" Margin="10,76,0,0" VerticalAlignment="Top" Width="772" SelectionChanged="TB_SelectionChanged" Loaded="TB_Loaded">
+            <DataGrid.Effect>
+                <DropShadowEffect/>
+            </DataGrid.Effect>
+        </DataGrid>
+        <Button Content="Доход" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Height="28" FontSize="16" FontFamily="Segoe Print" Click="Button_Click_Dochod">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Сумма" HorizontalAlignment="Left" Margin="102,10,0,0" VerticalAlignment="Top" Width="91" Height="28" FontSize="18" FontFamily="Segoe Script" Click="Button_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Сумма по запроссу" HorizontalAlignment="Left" Margin="198,0,0,0" VerticalAlignment="Top" Width="237" FontSize="18" FontFamily="Segoe Script" Height="38">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="LSum" Content="" HorizontalAlignment="Left" Margin="198,43,0,0" VerticalAlignment="Top" Width="329" Height="28" FontSize="16" FontFamily="Segoe Script" Background="Transparent"/>
+        <Label x:Name="LabelRes" Content="" HorizontalAlignment="Left" Margin="449,3,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.158,0.538" FontSize="16" FontFamily="Segoe Script" Width="31"/>
+        <Button Content="Добавить Категорию" HorizontalAlignment="Left" Margin="546,36,0,0" VerticalAlignment="Top" Width="219" Height="32" FontSize="18" FontFamily="Segoe Script" Click="Button_Click_1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ButtonDelCateg" Content="Удалить Катигорию" HorizontalAlignment="Left" Margin="557,311,0,0" VerticalAlignment="Top" Width="225" Height="34" FontSize="18" FontFamily="Segoe Script" Click="ButtonDelCateg_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FF181818" Offset="0.098"/>
+                    <GradientStop Color="#FF232323" Offset="0.142"/>
+                    <GradientStop Color="#FF3B3B3B" Offset="0.236"/>
+                    <GradientStop Color="#FF595959" Offset="0.024"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
